@@ -171,24 +171,124 @@ class SignUpPage extends StatelessWidget{
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text(
-          'Sign Up',
-          style: TextStyle(
-            color: Colors.black,
-          ),
-
-        ),
         backgroundColor: Colors.white,
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),
       ),
-      body: const SafeArea(
-          child: Center(
-            child: Text(
-              'Blank',
-              style: TextStyle(fontSize: 20),
-            ),
-          )
+      body:  SafeArea(
+         child: SingleChildScrollView(
+           child: Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 24.0),
+             child: SizedBox(
+               width: double.infinity,
+               child: Column(
+                 crossAxisAlignment: CrossAxisAlignment.center,
+                 children: [
+                   const SizedBox(height: 10),
+                   const Text(
+                     'Sign Up',
+                     style: TextStyle(
+                       fontSize: 32,
+                       fontWeight: FontWeight.bold,
+                       color: Colors.black,
+                     ),
+                   ),
+                   const SizedBox(height: 8),
+                   const Text(
+                     'Create your account',
+                     style: TextStyle(
+                       fontSize: 14,
+                       color: Colors.grey,
+                     ),
+                   ),
+                   const SizedBox(height: 40),
+                   TextFormField(
+                     decoration: InputDecoration(
+                       fillColor: Colors.purple.shade50,
+                       filled: true,
+                       prefixIcon: const Icon(Icons.person),
+                       hintText: 'Username',
+                       contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
+                       border: OutlineInputBorder(
+                         borderRadius: BorderRadius.circular(15.0),
+                         borderSide: BorderSide.none,
+                       ),
+                     ),
+                   ),
+                   const SizedBox(height: 20),
+                   TextFormField(
+                     decoration: InputDecoration(
+                       fillColor: Colors.purple.shade50,
+                       filled: true,
+                       prefixIcon: const Icon(Icons.email,color: Colors.grey),
+                       hintText: 'Email',
+                       contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
+                       border: OutlineInputBorder(
+                         borderRadius: BorderRadius.circular(15.0),
+                         borderSide: BorderSide.none,
+                       )
+                     ),
+                   ),
+                   const SizedBox(height: 20),
+                   TextFormField(
+                     obscureText: true,
+                     decoration: InputDecoration(
+                       fillColor: Colors.purple.shade50,
+                       filled: true,
+                       prefixIcon: const Icon(Icons.lock, color: Colors.grey),
+                       hintText: 'Password',
+                       contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
+                       border: OutlineInputBorder(
+                         borderRadius: BorderRadius.circular(15.0),
+                         borderSide: BorderSide.none
+                       )
+                     ),
+                   ),
+                   const SizedBox(height: 20),
+                   TextFormField(
+                     obscureText: true,
+                     decoration: InputDecoration(
+                         fillColor: Colors.purple.shade50,
+                         filled: true,
+                         prefixIcon: const Icon(Icons.lock, color: Colors.grey),
+                         hintText: 'Confirm Password',
+                         contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
+                         border: OutlineInputBorder(
+                             borderRadius: BorderRadius.circular(15.0),
+                             borderSide: BorderSide.none
+                         )
+                     ),
+                   ),
+                   const SizedBox(height: 30),
+                   SizedBox(
+                     width: double.infinity,
+                     height: 55,
+                     child: ElevatedButton(
+                       onPressed: (){
+
+                       },
+                       style: ElevatedButton.styleFrom(
+                         backgroundColor: Colors.purple,
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(30.0),
+                         ),
+                       ),
+                       child: const Text(
+                         'Sign Up',
+                         style: TextStyle(
+                           fontSize: 18,
+                           fontWeight: FontWeight.bold,
+                           color: Colors.white,
+                         ),
+                       ),
+                     ),
+                   ),
+                   const SizedBox(height: 40),
+                 ],
+               ),
+             ),
+           ),
+         ),
       ),
     );
   }
