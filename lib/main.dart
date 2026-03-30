@@ -73,7 +73,7 @@ class LoginPage extends StatelessWidget{
                   decoration: InputDecoration(
                     fillColor: Colors.purple.shade50,
                     filled: true,
-                    prefixIcon: const Icon(Icons.lock),
+                    prefixIcon: const Icon(Icons.password),
                     hintText: 'Password',
                     contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
                     border: OutlineInputBorder(
@@ -235,7 +235,7 @@ class SignUpPage extends StatelessWidget{
                      decoration: InputDecoration(
                        fillColor: Colors.purple.shade50,
                        filled: true,
-                       prefixIcon: const Icon(Icons.lock, color: Colors.grey),
+                       prefixIcon: const Icon(Icons.password, color: Colors.grey),
                        hintText: 'Password',
                        contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
                        border: OutlineInputBorder(
@@ -250,7 +250,7 @@ class SignUpPage extends StatelessWidget{
                      decoration: InputDecoration(
                          fillColor: Colors.purple.shade50,
                          filled: true,
-                         prefixIcon: const Icon(Icons.lock, color: Colors.grey),
+                         prefixIcon: const Icon(Icons.password, color: Colors.grey),
                          hintText: 'Confirm Password',
                          contentPadding: const EdgeInsets.symmetric(vertical: 18.0),
                          border: OutlineInputBorder(
@@ -283,7 +283,29 @@ class SignUpPage extends StatelessWidget{
                        ),
                      ),
                    ),
-                   const SizedBox(height: 40),
+                   const SizedBox(height: 20),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                       const Text(
+                         "Already have an account?",
+                         style: TextStyle(color: Colors.grey),
+                       ),
+                       TextButton(
+                         onPressed: (){
+                           Navigator.pop(context);
+                         },
+                         child: const Text(
+                           'Sign In',
+                           style: TextStyle(
+                             color: Colors.purple,
+                             fontWeight: FontWeight.bold,
+                           ),
+                         ),
+                       )
+                     ],
+                   ),
+                   const SizedBox(height: 30),
                  ],
                ),
              ),
