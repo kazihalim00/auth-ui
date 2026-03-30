@@ -108,6 +108,49 @@ class LoginPage extends StatelessWidget{
                         ),
                       ),
                     ),
+                   const SizedBox(height: 15),
+
+                  TextButton(
+                      onPressed:(){
+
+                      },
+                      child: const Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          color: Colors.purple,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                  ),
+
+                  const Spacer(),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Don't have an account?",
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
+                        TextButton(
+                          onPressed: (){
+
+                          },
+                          child: const Text(
+                            'Sign Up',
+                            style: TextStyle(
+                              color: Colors.purple,
+                              fontWeight: FontWeight.bold,
+                            ),
+
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 20),
                    ],
                  ),
                )
