@@ -49,6 +49,34 @@ class LoginPage extends StatelessWidget{
                     color: Colors.grey,
                   ),
                 ),
+                const SizedBox(height: 50),
+                TextFormField(
+                  decoration: InputDecoration(
+                    fillColor: Colors.purple.shade50,
+                    filled: true,
+                    prefixIcon: const Icon(Icons.person),
+                    hintText: 'Username',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    fillColor: Colors.purple.shade50,
+                    filled: true,
+                    prefixIcon: const Icon(Icons.lock),
+                    hintText: 'Password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: BorderSide.none,
+                    )
+                  ),
+                ),
               ],
             ),
           )
