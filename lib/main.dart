@@ -136,7 +136,10 @@ class LoginPage extends StatelessWidget{
                       ),
                         TextButton(
                           onPressed: (){
-
+                            Navigator.push(
+                                context,
+                              MaterialPageRoute(builder: (context) => const SignUpPage()),
+                            );
                           },
                           child: const Text(
                             'Sign Up',
@@ -158,5 +161,37 @@ class LoginPage extends StatelessWidget{
           ),
     );
   }
+}
+
+class SignUpPage extends StatelessWidget{
+  const SignUpPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text(
+          'Sign Up',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+
+        ),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        iconTheme: const IconThemeData(color: Colors.black),
+      ),
+      body: const SafeArea(
+          child: Center(
+            child: Text(
+              'Blank',
+              style: TextStyle(fontSize: 20),
+            ),
+          )
+      ),
+    );
+  }
+
 
 }
